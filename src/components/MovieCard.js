@@ -21,7 +21,10 @@ const useStyles = makeStyles(theme => ({
 const BaseCard = ({ data }) => {
     const classes = useStyles();
     if (!data) {
-        return null;
+        return (
+            <div className={classes.root}>
+                <div className={classes.content}>Search for your desired movie/series/episode in the searchbar above</div>
+            </div>);
     } else {
         return (
             <div className={classes.root} >
